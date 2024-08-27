@@ -1,4 +1,4 @@
-core/default.php
-back/default.php
-wildcards/default.php
+/core/default.php
+/back/default.php
+/wildcards/default.php
 .htaccess
