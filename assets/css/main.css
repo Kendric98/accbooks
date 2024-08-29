@@ -5580,6 +5580,31 @@ ul.pagination li.page-item a.page-link:focus {
   flex-direction: row;
 }
 
+.dnxte-content-toggle-front .row {
+  display: flex;
+  justify-content: space-between; /* Ensures space between elements */
+  /*margin: 0 10px; /* Adds margin on both sides of the row */
+}
+
+.dnxte-content-toggle-front .col-xl-3 {
+  flex: 1; /* Allows the columns to grow and fill the available space */
+  max-width: 40%; /* Ensures each element takes roughly one-third of the row, adjusting for margin */
+  margin: 0 10px; /* Adds margin between elements */
+}
+
+.dnxte-content-toggle-back .row {
+  display: flex;
+  justify-content: space-between; /* Ensures space between elements */
+  /*margin: 0 10px; /* Adds margin on both sides of the row */
+}
+
+.dnxte-content-toggle-back .col-xl-3 {
+  flex: 1; /* Allows the columns to grow and fill the available space */
+  max-width: 40%; /* Ensures each element takes roughly one-third of the row, adjusting for margin */
+  margin: 0 10px; /* Adds margin between elements */
+}
+
+
 .dnxte-toggle-left,
 .dnxte-toggle-right {
   cursor: pointer;
@@ -5689,6 +5714,7 @@ input[type=checkbox] {
   box-shadow: 0px 0px 43px rgba(185, 186, 194, 0.35);
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .plan {
