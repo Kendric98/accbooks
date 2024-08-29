@@ -54,7 +54,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #DC5F00;
-  zoom: 70%;
+  zoom: 80%;
 }
 
 .f-left {
@@ -294,11 +294,11 @@ label {
 }
 
 .theme-bg {
-  background: #546bfb;
+  background: hsl(232, 96%, 54%);
 }
 
 .theme-soft-bg {
-  background: #6767fe;
+  background: hsl(232, 96%, 54%);
 }
 
 .gradient-gray {
@@ -713,6 +713,19 @@ section-title
   opacity: 0.9;
 }
 
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-row .logo,
+.header-row .main-menu,
+.header-row .right-nav {
+    margin: 10;
+    padding: 10;
+}
+
 .main-header-area {
   position: absolute;
   z-index: 999;
@@ -748,10 +761,16 @@ section-title
 }
 .main-header-area.sticky {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 10;
 }
 
 .main-menu {
+  display: flex;
+  gap: 50px; /* Adjust the gap as needed */
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  list-style: inside;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
@@ -926,6 +945,11 @@ section-title
   .offset-sidebar {
     display: none;
   }
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
 }
 
 .right-nav ul li {
@@ -2708,7 +2732,7 @@ input.main-search-input:-ms-input-placeholder {
 .theme_btn {
   overflow: hidden;
   color: white;
-  background: #546bfb;
+  background: #1e38e2;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -5969,6 +5993,12 @@ input[type=checkbox] {
   color: white;
 }
 
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .foter-shape {
   position: absolute;
   z-index: 1;
@@ -6049,6 +6079,11 @@ input[type=checkbox] {
   font-weight: 600;
 }
 
+.footer__widget {
+  flex: 1;
+  min-width: 250px; /* Adjust this to set a minimum width for each widget */
+}
+
 .fot-list li a {
   color: rgba(0, 1, 8, 0.9);
   display: inline-block;
@@ -6078,14 +6113,16 @@ input[type=checkbox] {
 }
 .foter-subscribe .subscribe-form input {
   color: #000108;
-  width: 195px;
+  width: calc(100% - 120px);
   background: #fff;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   height: 55px;
   display: inline-block;
-  border: 0;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .foter-subscribe .subscribe-form input {
@@ -6100,6 +6137,25 @@ input[type=checkbox] {
 @media (max-width: 767px) {
   .foter-subscribe .subscribe-form input {
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-row {
+      flex-direction: column;
+  }
+  
+  .footer__widget {
+      margin-bottom: 30px;
+  }
+
+  .foter-subscribe input {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+  .foter-subscribe .theme_btn {
+      width: 100%;
   }
 }
 
