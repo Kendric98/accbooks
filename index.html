@@ -23,13 +23,14 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 </head>
 
 <body>
-    
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
     <!-- preloader -->
     <div id="preloader">
         <div class="preloader">
@@ -124,6 +125,34 @@
                 <li><a href="demo.html">Demo</a></li>
                 <li><a href="https://app.myaccuratebook.com">Login</a></li>
                 <li><a href="https://app.myaccuratebook.com/register">Sign Up</a></li>
+
+                
+                <!--<li class="has-dropdown">
+                    <a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="price.html">Price</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="testimonial.html">Testimonial</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="error.html">Error</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown"><a href="#">Cases</a>
+                    <ul class="sub-menu">
+                        <li><a href="case-1.html">Case One</a></li>
+                        <li><a href="case-2.html">Case Two</a></li>
+                        <li><a href="case-3.html">Case Three</a></li>
+                        <li><a href="case-single.html">Case Single</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown"><a href="#">Blogs</a>
+                    <ul class="sub-menu">
+                        <li><a href="blog-standard.html">Blog Standard</a></li>
+                        <li><a href="blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>-->
                 
             </ul>
         </nav>
@@ -254,7 +283,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    
+                    <!--<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.1s">
+                        <div class="s-services swipe-right mb-30">
+                           <div class="s-services__icon">
+                                <img class="s-icon mb-50 wow animated fadeInDown" data-wow-delay="0.1s" src="assets/img/icon/02.png" alt="">
+                           </div>
+                            <p class="mb-20">Automated Bookkeeping</p>
+                            <h3 class="mb-40">Save time with automated transactions and data entries.</h3>
+                            <a href="services.html"><img src="assets/img/icon/right-arrow.png" alt=""></a>
+                        </div>
+                    </div>-->
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay="0.3s">
                         <div class="s-services swipe-right mb-30">
                            <div class="s-services__icon">
@@ -459,6 +497,31 @@
         </section>
         <!-- client-feedback end -->
 
+        <!-- sdot-cases start -->
+        <!--<section class="sdot-cases-showcase pos-rel pt-170 pb-110 pt-md-100 pt-xs-100 pb-md-0 pb-xs-0">
+            <img class="cases-shape" src="assets/img/shape/c1.png" alt="">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="cases__img mb-50 wow fadeInLeft animated" data-wow-delay="0.1s">
+                            <img class="showwcase-img" src="assets/img/ai/03.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cases__wrapper mb-50 wow fadeInRight2 animated" data-wow-delay="0.1s">
+                            <div class="section-title text-left mb-110">
+                                <h3 class="mb-30">10+ Recent Case</h3>
+                                <h2 class="mb-50">#1 Data Analytics strategy <span class="vector-shape">projects</span></h2>
+                                <h4 class="sub-title mb-50">Data analytics project ideas that can boost your portfolio and help you land a data science job. The best way to get a job in data science is to showcase your skills with a portfolio of data analytics projects.</h4>
+                                <a href="case-single.html" class="theme_btn border_btn">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!-- sdot-cases end -->
+
         <!-- get-quote start -->
         <section class="get-quote grey-yellow-bg pos-rel pt-180 pb-130 pt-md-90 pt-xs-90 pb-md-55 pb-xs-55">
             <img class="quote-shape shape_01 d-none d-md-inline-block" src="assets/img/shape/08.svg" alt="">
@@ -480,26 +543,20 @@
                     <div class="col-lg-6 wow fadeInUp2 animated" data-wow-delay="0.1s">
                         <div class="quote-form white-bg mb-50">
                             <h3 class="quote-title mb-35">Subscribe for a Demo</h3>
-                            <form class="subscribe-form" action="form.php" method="post">
+                            <form class="subscribe-form" action="#">
                                 <div class="input-field mb-25">
                                     <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder=""> 
-                                    <img class="close-icon" src="#" alt="">
+                                    <input type="text" id="name" placeholder=""> 
+                                    <img class="close-icon" src="assets/img/icon/close.png" alt="">
                                 </div>
                                 <div class="input-field input-password mb-25">
-                                    <label for="password">Email Address</label>
-                                    <input type="text" id="email" name="email" placeholder="">
-                                    <img class="eye-icon" src="#" alt="">
+                                    <label for="password">Password</label>
+                                    <input type="text" id="password" placeholder="">
+                                    <img class="eye-icon" src="assets/img/icon/eye.png" alt="">
                                 </div>
-                                <div class="input-field input-password mb-25">
-                                    <label for="password">Phone Number</label>
-                                    <input type="text" id="phone" name="phone" placeholder="">
-                                    <img class="eye-icon" src="#" alt="">
-                                </div>
-                                <button class="theme_btn quote_btn_lg mb-35 mt-10">Request Demo</button>
                             </form>
-                            
-                            <span>Let's do great things together <a href="signup.html">Sign up</a></span>
+                            <button class="theme_btn quote_btn_lg mb-35 mt-10">Request Demo</button>
+                            <span>Let's do great things together <a href="app.myaccuratebook.com/register">Sign up</a></span>
                         </div>
                     </div>
                 </div>
@@ -667,39 +724,6 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#contactForm').on('submit', function (event) {
-                event.preventDefault(); // Prevent the form from submitting the traditional way
-
-                $.ajax({
-                    url: 'form.php', // The PHP file that handles the form submission
-                    type: 'POST',
-                    data: $(this).serialize(), // Serialize the form data
-                    dataType: 'json', // Expect a JSON response
-                    success: function (response) {
-                        if (response.status === 'success') {
-                            $('#responseMessage').html('<p>' + response.message + '</p>');
-                            $('#contactForm')[0].reset(); // Optionally reset the form
-                        } else {
-                            $('#responseMessage').html('<p>Error: ' + response.message + '</p>');
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        $('#responseMessage').html('<p>An error occurred: ' + error + '</p>');
-                    }
-                });
-            });
-        });
-    </script>
-        
-        
-
-
-    <!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145300308.js"></script>
-<!-- End of HubSpot Embed Code -->
 </body>
 
 </html>

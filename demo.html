@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -206,12 +204,12 @@
                         <div class="blog-form contact-form grey-bg mb-50">
                             <h3 class="comments-title mb-35">Send a message</h3>
                             <h5 class="mb-55">Fill in the details below correctly and choose a day and time you would like to book for a demo.</h5>
-                            <form class="subscribe-form" id="demo-form" action="" method="post">
+                            <form class="subscribe-form" action="#">
                                 <div class="row">
                                     <!-- Name Field -->
                                     <div class="col-xl-6 col-lg-12 black-active mb-20">
                                         <label for="name">Full Name</label>
-                                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                                     </div>
                             
                                     <!-- Email Field -->
@@ -250,14 +248,14 @@
                                         <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your comment" required></textarea>
                                     </div>
                             
-                                    <!-- Submit Button -->
+                                    <!-- Submit Button 
                                     <div class="col-lg-12">
                                         <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div> 
+                                    </div> -->
                                 </div>
                             </form>
-                        
-                            <!--<button class="theme_btn quote_btn_lg mb-35">Submit Details</button>-->
+                            
+                            <button class="theme_btn quote_btn_lg mb-35">Submit Details</button>
                         </div>
                     </div>
                 </div>
@@ -424,92 +422,6 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#contactForm').on('submit', function (event) {
-                event.preventDefault(); // Prevent the form from submitting the traditional way
-
-                $.ajax({
-                    url: 'form.php', // The PHP file that handles the form submission
-                    type: 'POST',
-                    data: $(this).serialize(), // Serialize the form data
-                    dataType: 'json', // Expect a JSON response
-                    success: function (response) {
-                        if (response.status === 'success') {
-                            $('#responseMessage').html('<p>' + response.message + '</p>');
-                            $('#contactForm')[0].reset(); // Optionally reset the form
-                        } else {
-                            $('#responseMessage').html('<p>Error: ' + response.message + '</p>');
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        $('#responseMessage').html('<p>An error occurred: ' + error + '</p>');
-                    }
-                });
-            });
-        });
-    </script>
-        
-
-    <!--<script>
-        document.getElementById("demo-form").addEventListener("submit", function(e) {
-          e.preventDefault();
-      
-          const formData = {
-            fields: [
-              {
-                name: "Fullname",
-                value: document.getElementById("name").value
-              },
-              {
-                name: "Email Address",
-                value: document.getElementById("email").value
-              },
-              {
-                name: "Phone Number",
-                value: document.getElementById("phone").value
-              }
-              {
-                name: "Company Name",
-                value: document.getElementById("company").value
-              }
-              {
-                name: "Datetime",
-                value: document.getElementById("datetime").value
-              }
-              {
-                name: "Comment",
-                value: document.getElementById("comment").value
-              }
-            ]
-          };
-      
-          fetch("https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_GUID", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-          })
-          .then(response => {
-            if (response.ok) {
-              alert("Form submitted successfully!");
-            } else {
-              alert("There was an error submitting the form.");
-            }
-          })
-          .catch(error => {
-            console.error("Error:", error);
-            alert("There was an error submitting the form.");
-          });
-        });
-      </script>-->
-
-
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145300308.js"></script>
-<!-- End of HubSpot Embed Code -->
 </body>
 
 </html>
