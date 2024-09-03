@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -543,20 +546,26 @@
                     <div class="col-lg-6 wow fadeInUp2 animated" data-wow-delay="0.1s">
                         <div class="quote-form white-bg mb-50">
                             <h3 class="quote-title mb-35">Subscribe for a Demo</h3>
-                            <form class="subscribe-form" action="#">
+                            <form class="subscribe-form" action="" method="post">
                                 <div class="input-field mb-25">
                                     <label for="name">Name</label>
-                                    <input type="text" id="name" placeholder=""> 
-                                    <img class="close-icon" src="assets/img/icon/close.png" alt="">
+                                    <input type="text" id="name" name="name" placeholder=""> 
+                                    <img class="close-icon" src="#" alt="">
                                 </div>
                                 <div class="input-field input-password mb-25">
-                                    <label for="password">Password</label>
-                                    <input type="text" id="password" placeholder="">
-                                    <img class="eye-icon" src="assets/img/icon/eye.png" alt="">
+                                    <label for="password">Email Address</label>
+                                    <input type="text" id="email" name="email" placeholder="">
+                                    <img class="eye-icon" src="#" alt="">
                                 </div>
+                                <div class="input-field input-password mb-25">
+                                    <label for="password">Phone Number</label>
+                                    <input type="text" id="phone" name="phone" placeholder="">
+                                    <img class="eye-icon" src="#" alt="">
+                                </div>
+                                <button class="theme_btn quote_btn_lg mb-35 mt-10">Request Demo</button>
                             </form>
-                            <button class="theme_btn quote_btn_lg mb-35 mt-10">Request Demo</button>
-                            <span>Let's do great things together <a href="app.myaccuratebook.com/register">Sign up</a></span>
+                            
+                            <span>Let's do great things together <a href="signup.html">Sign up</a></span>
                         </div>
                     </div>
                 </div>
@@ -724,6 +733,39 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#contactForm').on('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+
+                $.ajax({
+                    url: 'form.php', // The PHP file that handles the form submission
+                    type: 'POST',
+                    data: $(this).serialize(), // Serialize the form data
+                    dataType: 'json', // Expect a JSON response
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            $('#responseMessage').html('<p>' + response.message + '</p>');
+                            $('#contactForm')[0].reset(); // Optionally reset the form
+                        } else {
+                            $('#responseMessage').html('<p>Error: ' + response.message + '</p>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#responseMessage').html('<p>An error occurred: ' + error + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+        
+        
+
+
+    <!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145300308.js"></script>
+<!-- End of HubSpot Embed Code -->
 </body>
 
 </html>
