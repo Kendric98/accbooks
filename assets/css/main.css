@@ -719,11 +719,15 @@ section-title
   justify-content: space-between;
 }
 
-.header-row .logo,
+.header-row 
 .header-row .main-menu,
 .header-row .right-nav {
     margin: 10;
     padding: 10;
+}
+
+.logo {
+  padding: 5;
 }
 
 .main-header-area {
